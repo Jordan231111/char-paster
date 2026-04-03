@@ -17,6 +17,30 @@ function showStatus(msg, type) {
   statusEl.hidden = false;
 }
 
+function getStatusForError(errorLike) {
+  const message =
+    typeof errorLike === "string"
+      ? errorLike
+      : errorLike?.message || String(errorLike);
+
+  if (
+    message.includes("Receiving end does not exist") ||
+    message.includes("message port closed") ||
+    message.includes("went out of scope")
+  ) {
+    return {
+      type: "info",
+      message:
+        "The popup lost its reply channel. If the page is already typing, you can ignore this.",
+    };
+  }
+
+  return {
+    type: "error",
+    message: `Error: ${message}`,
+  };
+}
+
 function setTyping(active) {
   typeBtn.disabled = active;
   stopBtn.disabled = !active;
@@ -55,10 +79,12 @@ typeBtn.addEventListener("click", async () => {
     } else if (response?.aborted) {
       showStatus(response.error, "info");
     } else {
-      showStatus(response?.error || "Failed to type text.", "error");
+      const status = getStatusForError(response?.error || "Failed to type text.");
+      showStatus(status.message, status.type);
     }
   } catch (err) {
-    showStatus(`Error: ${err.message}`, "error");
+    const status = getStatusForError(err);
+    showStatus(status.message, status.type);
   } finally {
     setTyping(false);
   }
