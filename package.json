@@ -1,6 +1,6 @@
 {
   "name": "char-paster",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Firefox extension to type text character by character, bypassing paste restrictions.",
   "scripts": {
