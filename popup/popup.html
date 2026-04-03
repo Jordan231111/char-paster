@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Char Paster</h1>
+    <p class="hint">
+      <strong>Easiest way:</strong> Right-click any text field and choose
+      <em>"Char Paster — Type text here"</em> from the menu.
+    </p>
+
+    <hr>
+
+    <p class="hint">Or focus a field first, then paste text below and click Type It.</p>
+
+    <label for="text-input">Text to type:</label>
+    <textarea id="text-input" rows="6" placeholder="Paste or type your text here..."></textarea>
+
+    <label for="speed">Delay per character:</label>
+    <div class="speed-row">
+      <input type="range" id="speed" min="0" max="200" value="0">
+      <span id="speed-val">0 ms</span>
+    </div>
+
+    <button id="type-btn">Type It</button>
+    <button id="stop-btn" class="secondary" disabled>Stop</button>
+
+    <div id="status" class="status" hidden></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
