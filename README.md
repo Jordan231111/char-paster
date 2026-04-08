@@ -1,7 +1,5 @@
 # Char Paster
 
-**GitHub description:** Firefox extension that bypasses websites blocking copy/paste by typing clipboard or custom text into text fields one character at a time.
-
 Char Paster is built for sites that reject normal copy/paste into text fields, text boxes, and similar form inputs but still accept keyboard-style input. Instead of injecting a full pasted value at once, the extension focuses the target field and simulates text entry character by character.
 
 ## What It Does
