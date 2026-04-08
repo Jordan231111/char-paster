@@ -2,7 +2,7 @@
   "name": "char-paster",
   "version": "1.0.1",
   "private": true,
-  "description": "Firefox extension to type text character by character, bypassing paste restrictions.",
+  "description": "Firefox extension that bypasses websites blocking copy/paste by typing clipboard or custom text into fields one character at a time.",
   "scripts": {
     "start": "web-ext run --firefox=firefox --browser-console",
     "build": "web-ext build --overwrite-dest",

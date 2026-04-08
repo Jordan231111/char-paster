@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Char Paster",
   "version": "1.0.1",
-  "description": "Right-click any text field and type text character by character to bypass paste restrictions.",
+  "description": "Firefox extension that bypasses websites blocking copy/paste by typing clipboard or custom text into fields one character at a time.",
   "browser_specific_settings": {
     "gecko": {
       "id": "{b8f5e9a2-c7d1-4e3f-a6b0-1d2e3f4a5b6c}",
