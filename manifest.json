@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Char Paster",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Firefox extension that bypasses websites blocking copy/paste by typing clipboard or custom text into fields one character at a time.",
   "browser_specific_settings": {
     "gecko": {
